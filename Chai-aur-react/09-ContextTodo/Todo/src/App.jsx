@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { TodoProvider } from './contexts'
-import { TodoForm } from './components'
+import { TodoForm, TodoItem } from './components'
 
 const App = () => {
 
@@ -51,7 +51,7 @@ localStorage.setItem("todos", JSON.stringify(todos))
             {/*Loop and Add TodoItem here */}
             {
               todos.map((todo)=>(
-                <div key={todo.id} className='w-full'>  <TodoForm todo={todo}/> </div>
+                <div key={todo.id} className='w-full'>  <TodoItem todo={todo}/> </div>
               ))
             }
         </div>
